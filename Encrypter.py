@@ -177,7 +177,7 @@ license_text = """License agreement for the use of Encrypter software"
     The program is provided "as is" without any warranties. The Developer is not responsible for possible damage caused by the use or inability to use the Program.
 
     5. Acceptance of the agreement
-    By installing or using the Program, the user confirms his acceptance of the terms of this Agreement.
+    By clicking the "Accept" button, the user agrees with all clauses of this agreement and gets the opportunity to use it under the terms of this agreement.
 """
 
 text_widget = tk.Text(frame, wrap="word")
