@@ -109,7 +109,7 @@ def main_program():
     mainmenu.add_cascade(label='Прочее', menu=submenu)
 
 
-    label = tk.Label(root, text='\nMade by me\n', foreground='#FF00FF', font=('Arial', 10))
+    label = tk.Label(root, text='\nTake care of your safety\n', foreground='#FF00FF', font=('Arial', 10))
     label.pack()
 
     entry = tk.Text(root, height=5, width=30)
