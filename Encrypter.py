@@ -30,21 +30,21 @@ def main_program():
         root.quit()
 
     def help():
-        messagebox.showinfo('Помощь', """Привет!
+        messagebox.showinfo('assistance', """Hello!
 
-Рад представить вам программу "Encrypter" — простой и надёжный инструмент для шифрования текста.
+I am pleased to introduce you to the "Encrypter" program - a simple and reliable tool for encrypting text.
 
-Программа по умолчанию шифрует текст в двоичном формате и сохраняет его в файле "binary.txt". Однако вы можете легко изменить кодировку символов, просто отредактировав этот файл вручную. Это значит, что, обменявшись файлом "binary.txt" с собеседником безопасным способом, вы сможете надёжно защитить переписку от посторонних глаз.
+The program by default encrypts text in binary format and saves it in the file "binary.txt". However, you can easily change the character encoding by simply editing this file manually. This means that by exchanging the “binary.txt” file with your interlocutor in a secure way, you can reliably protect your correspondence from prying eyes.
 
-"Encrypter" позволяет вам самостоятельно настроить шифрование, обеспечивая полный контроль над безопасностью ваших данных.
+"Encrypter" allows you to customize your encryption, giving you complete control over the security of your data.
 
-Надеюсь, программа поможет вам сохранить приватность и спокойствие в общении!
+I hope the program will help you maintain privacy and peace of mind in your communications!
 
-С уважением,
-Создатель программы""")
+Sincerely,
+Creator of the program""")
 
     def donate():
-        messagebox.showinfo('Поддержать создателя', 'Скоро будет...')
+        messagebox.showinfo('Support the creator', 'Soon...')
 
     def encrypt():
         message = entry.get('1.0', tk.END).strip()
@@ -103,10 +103,10 @@ def main_program():
     mainmenu = tk.Menu()
 
     submenu = tk.Menu(tearoff=0)
-    submenu.add_command(label='Помощь', command=help)
-    submenu.add_command(label='Поддержать создателей', command=donate)
+    submenu.add_command(label='Help', command=help)
+    submenu.add_command(label='Support the creators', command=donate)
 
-    mainmenu.add_cascade(label='Прочее', menu=submenu)
+    mainmenu.add_cascade(label='Other', menu=submenu)
 
 
     label = tk.Label(root, text='\nTake care of your safety\n', foreground='#FF00FF', font=('Arial', 10))
@@ -115,39 +115,39 @@ def main_program():
     entry = tk.Text(root, height=5, width=30)
     entry.pack()
 
-    encrypt_button = ttk.Button(root, text='Зашифровать', command=encrypt)
+    encrypt_button = ttk.Button(root, text='Crypt', command=encrypt)
     encrypt_button.pack()
 
-    decrypt_button = ttk.Button(root, text='Расшифровать', command=decrypt)
+    decrypt_button = ttk.Button(root, text='Decrypt', command=decrypt)
     decrypt_button.pack()
 
     output = tk.Text(root, height=5, width=30)
     output.pack()
 
-    copy_button = ttk.Button(root, text='Скопировать', command=copy_text)
+    copy_button = ttk.Button(root, text='Copy', command=copy_text)
     copy_button.pack()
 
-    paste_button = ttk.Button(root, text='Вставить', command=paste_text)
+    paste_button = ttk.Button(root, text='Past', command=paste_text)
     paste_button.pack()
 
-    clear_button = ttk.Button(root, text='Очистить строку', command=clear_text)
+    clear_button = ttk.Button(root, text='Clear line', command=clear_text)
     clear_button.pack()
 
     root.config(menu=mainmenu)
     root.mainloop()
 
 def accept_license():
-    messagebox.showinfo("Принять", "Лицензионное соглашение принято.")
+    messagebox.showinfo("Accept", "License agreement accepted.")
     root.destroy()
     main_program()
 
 def reject_license():
-    messagebox.showwarning("Отклонить", "Лицензионное соглашение отклонено.")
+    messagebox.showwarning("Reject", "Deviation License Agreement.")
     root.destroy()
 
 root = tk.Tk()
 
-root.title("Лицензионное соглашение")
+root.title("License Agreement")
 root.geometry("1200x800")
 
 canvas = tk.Canvas(root)
@@ -161,23 +161,23 @@ canvas.configure(yscrollcommand=scrollbar.set)
 frame = tk.Frame(canvas)
 canvas.create_window((0, 0), window=frame, anchor="nw")
 
-license_text = """Лицензионное соглашение на использование программного обеспечения "Encrypter"
+license_text = """License agreement for the use of Encrypter software"
 
-    1. Общие положения
-    Программное обеспечение "Encrypter" (далее — "Программа") предоставляется пользователю бесплатно на условиях настоящего лицензионного соглашения (далее — "Соглашение").
+    1. General provisions
+    The "Encrypter" software (hereinafter referred to as the "Program") is provided to the user free of charge under the terms of this license agreement (hereinafter referred to as the "Agreement").
 
-    2. Разрешение на использование
-    Пользователь получает право на бесплатное использование Программы.
+    2. Permission to use
+    The User receives the right to use the Program free of charge.
 
-    3. Ограничения
-    Пользователь соглашается:
-    Не использовать Программу в противоправных целях, включая, но не ограничиваясь, нарушение законодательства, взлом информационных систем, распространение вредоносного ПО или скрытие противоправной деятельности.
+    3. Restrictions
+    The user agrees:
+    Do not use the Program for illegal purposes, including, but not limited to, breaking the law, hacking information systems, distributing malware, or hiding illegal activities.
 
-    4. Отказ от ответственности
-    Программа предоставляется "как есть" без каких-либо гарантий. Разработчик не несет ответственности за возможный ущерб, вызванный использованием или невозможностью использования Программы.
+    4. Disclaimer
+    The program is provided "as is" without any warranties. The Developer is not responsible for possible damage caused by the use or inability to use the Program.
 
-    5. Принятие соглашения
-    Устанавливая или используя Программу, пользователь подтверждает свое согласие с условиями настоящего Соглашения.
+    5. Acceptance of the agreement
+    By installing or using the Program, the user confirms his acceptance of the terms of this Agreement.
 """
 
 text_widget = tk.Text(frame, wrap="word")
@@ -185,10 +185,10 @@ text_widget.insert("1.0", license_text)
 text_widget.config(state="disabled")
 text_widget.pack(fill="both", expand=True)
 
-accept_button = tk.Button(root, text="Принять", command=accept_license)
+accept_button = tk.Button(root, text="Accept", command=accept_license)
 accept_button.pack(side="left")
 
-reject_button = tk.Button(root, text="Отклонить", command=reject_license)
+reject_button = tk.Button(root, text="Reject", command=reject_license)
 reject_button.pack(side="right")
 
 text_widget.config(height=50, width=130)
