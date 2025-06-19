@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <EditText
+        android:id="@+id/editTextCipher"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top|start"
+        android:hint="Введите зашифрованный текст"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:minLines="6"
+        android:textColor="#000000"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:id="@+id/buttonDefaultBinaryCipher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Вернуть дефолтный бинарный шифр" />
+
+    <Button
+        android:id="@+id/buttonSaveCipher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Сохранить" />
+
+    <Button
+        android:id="@+id/buttonGenerateCipher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Сгенерировать случайный шифр" />
+
+</LinearLayout>
